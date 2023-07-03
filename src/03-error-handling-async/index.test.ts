@@ -10,6 +10,7 @@ const message = 'It is error!';
 
 describe('resolveValue', () => {
   test('should resolve provided value', async () => {
+    expect.assertions(1);
     await expect(resolveValue(message)).resolves.toBe(message);
   });
 });
@@ -32,6 +33,7 @@ describe('throwCustomError', () => {
 
 describe('rejectCustomError', () => {
   test('should reject custom error', async () => {
+    expect.assertions(1);
     await expect(rejectCustomError()).rejects.toThrow(MyAwesomeError);
   });
 });
